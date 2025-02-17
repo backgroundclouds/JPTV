@@ -5,10 +5,13 @@
 <!-- Hero Section: Video Background -->
 <section class="hero-section">
   <div class="hero">
-    <video autoplay loop muted playsinline class="background-video">
+    <!-- <video autoplay loop muted playsinline class="background-video">
       <source src="{{ url_for('static', filename='videos/background_video.mp4') }}" type="video/mp4">
+    </video> -->
+    <video autoplay muted loop playsinline>
+      <source src="https://raw.githubusercontent.com/backgroundclouds/jptv-assets/main/background_video.mp4"
+        type="video/mp4">
     </video>
-    <!-- <img src="{{ url_for('static', filename='images/subtitles.gif') }}" class="overlay-text"> -->
   </div>
 </section>
 

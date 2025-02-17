@@ -9,6 +9,10 @@ def create_app():
     
     # Enable caching for static files
     app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 3600  # Cache for 1 hour
+
+    # Enable compression if possible
+    app.config['COMPRESS_MIMETYPES'] = ['text/html', 'text/css', 'application/json', 'application/javascript', 'image/png', 'image/jpeg', 'video/mp4']
+    app.config['COMPRESS_LEVEL'] = 6
     
 
     # Load data from YAML file

@@ -13,20 +13,19 @@ def create_app():
     @app.route('/')
     def index():
 
-        
-        
         return render_template('index.html', projects=projects)
-
-    @app.route('/test_page')
-    def test_page():
-        return render_template('test_page.html', projects=projects)
 
     @app.route('/about')
     def about():
         return render_template('about.html')
     
+
     return app
 
+if __name__ == '__main__':
+    app = create_app()
+    port = int(os.environ.get('PORT', 8000))
+    app.run(host='0.0.0.0', port=port)
 
 
 # if __name__ == '__main__':

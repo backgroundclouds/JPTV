@@ -1,0 +1,222 @@
+body {
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Oswald', sans-serif;
+}
+
+.hero {
+    display: grid;
+    position: relative;
+    grid-template-rows: 1fr;
+    grid-template-columns: minmax(6vw, 1fr) repeat(8, 1fr) minmax(6vw, 1fr);
+    align-items: center;
+    justify-items: center;
+    height: 100vh;
+    overflow: hidden;
+    padding: 4vw;
+}
+
+@media (min-width: 768px) {
+    .hero {
+        grid-template-columns: minmax(4vw, 1fr) repeat(24, 1fr) minmax(4vw, 1fr);
+        --container-width: min(1500px, 100vw - 8vw);
+        --row-height-scaling-factor: 0.0215;
+    }
+}
+
+.background-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+section {
+    padding-left: 0.25rem;  /* px-1 */
+    padding-right: 0.25rem;
+    margin-top: 1rem;       /* mt-4 */
+  }
+  
+  @media (min-width: 576px) {
+    section {
+      padding-left: 0.7rem;  /* px-sm-2 */
+      padding-right: 0.7rem;
+    }
+  }
+  
+  @media (min-width: 768px) {
+    section {
+      padding-left: 1.2rem;    /* px-md-3 */
+      padding-right: 1.2rem;
+    }
+  }
+
+  .hero-section {
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+.video-card {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .video-thumbnail {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  .video-card:hover .video-overlay {
+    opacity: 1;
+  }
+  
+  .video-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+  }
+  
+  .video-overlay small {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 1rem;
+  }
+
+  .overlay-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    z-index: 10;
+    text-decoration: none;
+    color: inherit;
+  }
+  
+
+
+.modal-content, .modal-body iframe {
+    border-radius: 8px;
+}
+
+i {
+    color: inherit;
+  }
+
+
+  .navbar {
+    transition: top 0.3s;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1030; /* Ensure navbar stays above other elements */
+}
+
+.navbar-brand img {
+    width: 150px;
+    height: auto;
+    display:block;
+    image-rendering: auto;
+}
+
+@media (max-width: 768px) {
+    .navbar-brand img {
+        width: 115px; /* Adjust the width for smaller screens */
+        height: auto;
+    }
+}
+.navbar-nav .nav-link {
+        font-size: 1.5vw; /* Responsive scaling */
+    }
+    
+    @media (max-width: 768px) {
+        .navbar-nav .nav-link {
+            font-size: 14px; /* Ensures links don't shrink too much on small screens */
+        }
+    }
+    
+    @media (min-width: 1200px) {
+        .navbar-nav .nav-link {
+            font-size: 22px; /* Prevents excessive scaling on very large screens */
+        }
+}
+
+
+
+
+
+a {
+    color: white !important;
+    text-decoration: underline !important;
+  }
+  
+  a:hover {
+    color: #f0f0f0 !important;
+    text-decoration: underline !important;
+  }
+
+
+
+/* Container to mimic Squarespace grid behavior */
+.content-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+
+/* Wrapper for uniform thumbnails */
+.thumbnail-wrapper {
+  aspect-ratio: 16 / 9; /* Adjust ratio as needed */
+  overflow: hidden;
+  border-radius: 0.5rem;
+}
+
+/* Ensure images fit their container */
+.uniform-thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Thumbnail image behavior */
+.thumbnail-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures consistent image presentation */
+}
+
+
+.ratio iframe {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+.responsive-heading {
+  font-size: clamp(1.5rem, 4vw, 2.5rem);
+}
+
+.responsive-text {
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+}

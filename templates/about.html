@@ -1,0 +1,49 @@
+{% extends 'base.html' %}
+{% block title %}About | JPTV Media{% endblock %}
+{% block content %}
+
+<!-- About Page Layout -->
+<section class="p-3">
+  <br>
+  <br>
+
+</section>
+
+<section>
+  <div class="container row my-4 py-5">
+    <!-- <div class="col-md-6">
+    </div> -->
+    <div class="row align-items-center">
+      <!-- Left Side: Image Montage -->
+      <div class="col-md-6">
+        <img src="{{ url_for('static', filename='images/acura_bts_allan_387.jpg') }}" class="img-fluid"
+          alt="About Montage">
+      </div>
+
+      <!-- Right Side: Copy -->
+      <div class="col-md-6 text-white">
+        <h2><strong>do it, or don't</strong></h2>
+        <p>Experienced up and down the production chain. Experienced across departments.
+          Familiar and versed with client
+          expectations, agency expectations, and director expectations. Familiar with the different business shapes
+          <strong>film-production</strong> can occur in, be that outer market, no market, <i>never heard of a
+            martket</i>, etc,.
+          Preference towards commercial work.
+        </p>
+        <p>Occasional <a target="_blank" href="https://framebybrand.substack.com/?showWelcome=true">blogger</a>.
+          Occasional template maker. Hobby developer. Big fan of ideas & reinterpreting the old. I
+          didn't make this site with squarespace, but I did steal their template. </p>
+        <p>Hit me up. Connect. Some socials below. <strong>Cheers.</strong> </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact Section (Reusing Component) -->
+<section style="background-color: #f8f9fa" class="p-5">
+
+  {% include 'includes/contact_info.html' %}
+
+</section>
+
+{% endblock %}

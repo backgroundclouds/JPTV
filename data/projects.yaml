@@ -1,0 +1,258 @@
+- title: "Golden Wrapper"
+  category: "Broadcast"
+  thumbnail: "images/thumbnails/golden_thumbnail.jpg"
+  video_link: "https://youtube.com/watch?v=8lIBUeA82Vs"
+  production_company:
+    name: "KSI"
+    link: "https://ksiproduction.com/goya"
+  director:
+    name: "Robert Llauro"
+    link: "http://www.robertllauro.com/"
+  agency:
+    name: "Dieste"
+    link: "https://www.instagram.com/philchoe/p/DA10eoePawC/?__d=11&img_index=1"
+  client:
+    name: "Goya"
+    link: "https://goya.com"
+
+- title: "Thalia x Ícono"
+  category: "Broadcast"
+  thumbnail: "images/thumbnails/thaila_thumbnail.jpg"
+  video_link: "https://www.youtube.com/watch?v=FVejauiwSfg"
+  production_company:
+    name: "Landia"
+    link: "https://www.landia.com/mexico/"
+  director:
+    name: "Robert Llauro"
+    link: "https://www.adforum.com/talent/81849134-robert-llauro/work"
+  agency:
+    name: 
+    link:
+  client:
+    name: "Yanbal"
+    link: "https://www.thaliasource.net/2023/02/24/icono-de-yanbal"
+
+
+- title: "Anyone Can Be Santa"
+  thumbnail: "images/thumbnails/tft_thumbnail.jpg"
+  category: "Broadcast"
+  video_link: "https://www.youtube.com/watch?v=L0pIiAiydqk"
+  production_company:
+    name: "Curfew"
+    link: "https://www.curfew.tv/"
+  agency:
+    name: "Wunderman Thompson"
+    link: "https://www.wundermanthompson.com/"
+  client:
+    name: "Toys For Tots"
+    link: "https://www.toysfortots.org"
+  director:
+    name: "Madeline Clayton"
+    link: "http://madelineclayton.com/work"
+
+- title: "Our Stories"
+  thumbnail: "images/thumbnails/ourstories_thumbnail.png"
+  category: "Broadcast"
+  video_link: "https://player.vimeo.com/video/795421149"
+  production_company:
+    name: "Sanctuary"
+    link: "https://www.sanctuarycontent.com/work/"
+  agency:
+    name: "FCB Chicago"
+    link: "https://www.fcb.com/where-we-are/fcb-chicago"
+  client:
+    name: "Walmart"
+    link: "https://commercial-song.net/2022/07/walmart-spend-a-little-less-to-get-a-little-more-commercial-song/"
+  director:
+    name: "Goh Iromoto"
+    link: "https://www.gohiromoto.com/"
+
+- title: "Canadian Women’s Open"
+  thumbnail: "images/thumbnails/canopen_thumbnail.jpg"
+  category: "Broadcast"
+  video_link: "https://vimeo.com/727553026"
+  production_company:
+    name: "Adam Madrzyk (DP)"
+    link: "https://www.amfilms.ca/"
+  agency:
+    name: "Wassermann Media"
+    link: "https://www.teamwass.com/"
+  client:
+    name: "LPGA"
+    link: "https://www.lpga.com/"
+  director:
+    name: "J. Beale"
+    link: "https://www.jackiebeale.com/"
+
+- title: "CULTURASHIFT"
+  category: "Broadcast"
+  thumbnail: "images/thumbnails/acura_thumbnail.png"
+  video_link: "https://www.youtube.com/watch?v=R0TZD7nhPYg"
+  director:
+    name: "Robert Llauro"
+    link: "https://www.adforum.com/talent/81849134-robert-llauro/work"
+  production_company:
+    name: "Landia"
+    link: "https://www.landia.com/los-angeles/"
+  agency:
+    name: "Orci"
+    link: "https://orci.com/"
+  client:
+    name: "Acura"
+    link: "https://www.youtube.com/c/acura"
+
+# - title: "Doja"
+#   category: "Music Video"
+#   thumbnail: "images/thumbnails/doja_thumbnail.jpg"
+#   video_link: "https://www.youtube.com/watch?v=xiVqKFDqxyg"
+#   director:
+#     name: "Hidji"
+#     link: "https://www.instagram.com/hidjiworld/?hl=en"
+#   production_company:
+#     name: "The Genius Club"
+#     link: "https://www.instagram.com/thegeniusclxb/"
+#   agency:
+#     name: "AWGE"
+#     link: "https://awge.com/home"
+#   client:
+#     name: "$NOT"
+#     link: "https://snot.xyz/"
+
+- title: "Princess Nokia - No Effort"
+  category: "Music Video"
+  thumbnail: "images/thumbnails/nokia_thumbnail.jpg"
+  video_link: "https://www.youtube.com/watch?v=IYcRGO7b_EA"
+  director:
+    name: "Travis Libin"
+    link: "https://www.instagram.com/p/CbQQDA_LfIU/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA=="
+  production_company:
+    name: "Bellanoir Films"
+    link: "https://www.instagram.com/bellanoirfilms/"
+  agency:
+    name: ""
+    link: ""
+  client:
+    name: "Arista Records"
+    link: "https://www.aristarecordings.com/"
+
+- title: "IT'S THE LITTLE THINGS"
+  category: "Broadcast"
+  thumbnail: "images/thumbnails/littlethings_thumbnail.jpg"
+  video_link: "https://www.youtube.com/watch?v=bgpoOpNX5IY"
+  director:
+    name: "Madeline Kelly"
+    link: "http://madelineclayton.com/"
+  production_company:
+    name: "Curfew"
+    link: "https://www.curfew.tv/"
+  agency:
+    name: "Ogilvy"
+    link: "https://www.ogilvy.com/"
+  client:
+    name: "IKEA"
+    link: "https://www.ikea.com/"
+
+# - title: "Delta Unwrap Adventure"
+#   category: "Broadcast"
+#   thumbnail: "images/thumbnails/delta_thumbnail.jpg"
+#   video_link: "https://youtu.be/deltaholiday"
+#   director:
+#     name: "Isaac Ravishankara"
+#     link: "http://www.isaacravishankara.com/"
+#   production_company:
+#     name: "Partners & Company"
+#     link: "https://www.partnersandcompany.co/"
+#   agency:
+#     name: "Window Seat (Delta Airlines in-house)"
+#     link: "https://www.delta.com/"
+#   client:
+#     name: "Allison Anderson (DP)"
+#     link: "https://allisonanderson.com/"
+
+
+
+- title: "For Those Who…."
+  category: "Social + Print"
+  thumbnail: "images/thumbnails/athena_thumbnail.jpg"
+  video_link: "https://www.youtube.com/watch?v=xwwqQlWgq_w"
+  director:
+    name: "Petra Collins"
+    link: "https://www.instagram.com/petrafcollins/"
+  production_company:
+    name: "19th & Park"
+    link: "https://www.19parkinc.com/"
+  client:
+    name: "Athena Club"
+    link: "https://www.athenaclub.com/"
+
+# - title: "Prosecco ASMR"
+#   category: "Evergreen + Social"
+#   thumbnail: "images/thumbnails/rose_thumbnail.jpg"
+#   video_link: "https://vimeo.com/577339939"
+#   director:
+#     name: null
+#     link: null
+#   production_company:
+#     name: "Peace Pictures"
+#     link: "https://www.peacepicturesinc.com/about-1"
+#   agency: 
+#     name: null
+#     link:  null
+#   client:
+#     name: "FreixnetUSA"
+#     link: "https://www.freixenetusa.com/"
+
+
+- title: "Census Made Simple"
+  category: "Broadcast + Digital"
+  thumbnail: "images/thumbnails/census_thumbnail.jpg"
+  video_link: "https://www.youtube.com/watch?v=vXMY6rXDzZc"
+  director:
+    name: "Michael Gondry"
+    link: "https://www.partizan.com/director/olivier-gondry/commercials-branded"
+  production_company:
+    name: "Partizan"
+    link: "https://www.partizanstudio.com/director/olivier-gondry"
+  agency: 
+    name: "Team Y&R"
+    link: "https://www.vmlyr.com/"
+  client:
+    name: "Census Bureau"
+    link: "https://www.census.gov/"
+  
+
+
+- title: "Egg on Your Face"
+  category: "Short Film"
+  thumbnail: "images/thumbnails/eoyf_thumbnail.jpg"
+  video_link: "https://vimeo.com/445386925"
+  director:
+    name: "J Parkhill"
+    link: ""
+  production_company:
+    name: "JPTV"
+    link: ""
+  agency:
+    name: "Yaniv Glaser (DP)"
+    link: "https://www.yanivglaser.com/"
+  client:
+    name: "PSFF 2020"
+    link: "http://www.psff.eu/fest-2021/"
+
+
+- title: "We Are The Ones"
+  category: "PSA"
+  thumbnail: "images/thumbnails/obama_thumbnail.jpg"
+  video_link: "https://www.youtube.com/watch?v=U-gLzAx2Sqo"
+  director:
+    name: "Jason Harper"
+    link: "https://www.jmharper.com/"
+  production_company:
+    name: "Lonely Leap"
+    link: "https://lonelyleap.com/"
+  agency: 
+    name: "Matter Unltd"
+    link: "https://matterunlimited.com/"
+  client:
+    name: 
+    link: 

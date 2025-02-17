@@ -24,13 +24,12 @@ def create_app():
     @app.route('/about')
     def about():
         return render_template('about.html')
+
+    @app.route('/health')
+    def health_check():
+        return "OK", 200
     
-
     return app
-
-@app.route('/health')
-def health_check():
-    return "OK", 200
 
 if __name__ == '__main__':
     app = create_app()

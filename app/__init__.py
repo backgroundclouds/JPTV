@@ -5,6 +5,11 @@ import os
 def create_app():
     # Initialize Flask app
     app = Flask(__name__)
+    
+    
+    # Enable caching for static files
+    app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 3600  # Cache for 1 hour
+    
 
     # Load data from YAML file
     with open('data/projects.yaml', 'r') as file:
@@ -26,6 +31,8 @@ if __name__ == '__main__':
     app = create_app()
     port = int(os.environ.get('PORT', 8000))
     app.run(host='0.0.0.0', port=port)
+
+
 
 
 # if __name__ == '__main__':

@@ -8,7 +8,9 @@ def create_app():
     
     
     # Enable caching for static files
-    app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 3600  # Cache for 1 hour
+    # app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 3600  # Cache for 1 hour
+    app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 604800  # Cache static files for 1 week
+
 
     # Load data from YAML file
     with open('data/projects.yaml', 'r') as file:

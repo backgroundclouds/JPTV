@@ -220,3 +220,29 @@ a {
 .responsive-text {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
 }
+
+.navbar-nav .nav-link {
+  font-size: 1.5vw; /* Current responsive scaling */
+}
+
+/* Ensure dropdown menu items have a larger, readable size */
+.dropdown-menu .dropdown-item {
+  font-size: 16px; /* Adjust as needed */
+  padding: 10px 15px; /* Improves spacing */
+}
+
+@media (max-width: 768px) {
+  .navbar-nav .nav-link {
+      font-size: 25px; /* Ensures menu items are readable on smaller screens */
+  }
+  .dropdown-menu .dropdown-item {
+      font-size: 30px; /* Increase for mobile readability */
+  }
+}
+
+.navbar-nav .nav-link.override-font {
+  font-size: 3.1vw !important;
+}
+
+
+

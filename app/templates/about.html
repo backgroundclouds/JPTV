@@ -1,5 +1,26 @@
 {% extends 'base.html' %}
 {% block title %}About | JPTV Media{% endblock %}
+
+
+{% block meta_description %}About Josh Parkhill, a commercial film production manager experienced in logistics, bidding,
+budgeting, and crew coordination.{% endblock %}
+{% block og_title %}About Josh Parkhill | JPTV Media{% endblock %}
+{% block og_description %}About Josh Parkhill, a commercial film production manager experienced in logistics, bidding,
+budgeting, and crew coordination.{% endblock %}
+
+
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About Josh Parkhill - JPTV Media",
+  "url": "https://jptv.space/about",
+  "description": "About Josh Parkhill, a commercial film production manager experienced in logistics, bidding, budgeting, and crew coordination."
+}
+</script>
+
+{% endblock %}
 {% block content %}
 
 <!-- About Page Layout -->

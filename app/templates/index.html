@@ -1,5 +1,36 @@
 {% extends 'base.html' %}
 {% block title %}Home | JPTV Media{% endblock %}
+
+{% block meta_description %}Freelance Line Producer & Production Manager for commercial film production. Available for
+projects across the U.S.{% endblock %}
+{% block og_title %}JPTV Media - Freelance Line Producer{% endblock %}
+{% block og_description %}Experienced in bidding, budgeting, logistics, and managing commercial film productions.
+Available for U.S. projects.{% endblock %}
+
+
+{% block head %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Josh Parkhill",
+  "url": "https://jptv.space",
+  "jobTitle": "Freelance Line Producer & Production Manager",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "JPTV Media",
+    "url": "https://jptv.space"
+  },
+  "contactPoint": {
+    "@type": "ContactPoint",
+    "email": "josh@jpax.tv",
+    "telephone": "+1-917-744-1674",
+    "contactType": "Business"
+  }
+}
+</script>
+{% endblock %}
+
 {% block content %}
 
 <!-- Hero Section: Video Background -->

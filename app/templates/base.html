@@ -5,6 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}JPTV Media{% endblock %}</title>
+  <meta name="description"
+    content="Josh Parkhill | Freelance Line Producer & Production Manager. Available across the U.S. for commercial film production.">
+  <meta name="keywords"
+    content="line producer, production manager, commercial film production, bidding, budgeting, logistics, advertising">
+  <meta name="author" content="Josh Parkhill">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="JPTV Media - Freelance Line Producer & Production Manager">
+  <meta property="og:description"
+    content="Josh Parkhill specializes in commercial film production, offering experience in bidding, budgeting, logistics, and on-set management.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://jptv.space">
+  <meta property="og:image" content="https://jptv.space/static/images/jp_logo_white_on_transparent.png">
+  <meta property="og:site_name" content="JPTV Media">
+  <meta property="og:locale" content="en_US">
+
+  <!-- Canonical Tag -->
+  <link rel="canonical" href="https://jptv.space">
+
+  <!-- Mobile UX Optimization -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Fast Indexing (Search Engine Crawlers) -->
+  <meta name="googlebot" content="index,follow">
+  <meta name="bingbot" content="index,follow">
+  <meta name="yandex" content="index,follow">
+
+
+
 
 
 
@@ -24,8 +52,6 @@
 
 
   <!-- Favicon -->
-
-
   <!-- Favicon for browsers -->
   <link rel="icon" href="{{ url_for('static', filename='images/favicon_io_extrableed/android-chrome-512x512.png') }}"
     type="image/x-icon">
@@ -53,10 +79,30 @@
 
 
 
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "JPTV Media",
+      "url": "https://jptv.space",
+      "description": "Freelance Line Producer & Production Manager for commercial film production. Available for projects across the U.S.",
+      "publisher": {
+        "@type": "Person",
+        "name": "Josh Parkhill",
+        "url": "https://jptv.space"
+      },
+      "image": "https://jptv.space/static/images/jp_logo_white_on_transparent.png",
+      "sameAs": [
+        "https://framebybrand.substack.com/",
+        "https://www.instagram.com/jptv.space/",
+        "https://bsky.app/profile/jptv.substack.com",
+        "https://github.com/backgroundclouds"
+      ]
+    }
+    </script>
 
 
-
-  <!-- tbd -->
+  {% block head %}{% endblock %}
 
 </head>
 

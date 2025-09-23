@@ -1,37 +1,31 @@
-{% extends 'base.html' %}
-{% block title %}Home | JPTV Media{% endblock %}
-
-{% block meta_description %}Freelance Line Producer & Production Manager for commercial film production. Available for
-projects across the U.S.{% endblock %}
-{% block og_title %}JPTV Media - Freelance Line Producer{% endblock %}
-{% block og_description %}Experienced in bidding, budgeting, logistics, and managing commercial film productions.
-Available for U.S. projects.{% endblock %}
-
-
-{% block head %}
+{% extends 'base.html' %} {% block title %}Home | JPTV Media{% endblock %} {%
+block meta_description %}Freelance Line Producer & Production Manager for
+commercial film production. Available for projects across the U.S.{% endblock %}
+{% block og_title %}JPTV Media - Freelance Line Producer{% endblock %} {% block
+og_description %}Experienced in bidding, budgeting, logistics, and managing
+commercial film productions. Available for U.S. projects.{% endblock %} {% block
+head %}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Person",
-  "name": "Josh Parkhill",
-  "url": "https://jptv.space",
-  "jobTitle": "Freelance Line Producer & Production Manager",
-  "worksFor": {
-    "@type": "Organization",
-    "name": "JPTV Media",
-    "url": "https://jptv.space"
-  },
-  "contactPoint": {
-    "@type": "ContactPoint",
-    "email": "josh@jpax.tv",
-    "telephone": "+1-917-744-1674",
-    "contactType": "Business"
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Josh Parkhill",
+    "url": "https://jptv.space",
+    "jobTitle": "Freelance Line Producer & Production Manager",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "JPTV Media",
+      "url": "https://jptv.space"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "email": "josh@jpax.tv",
+      "telephone": "+1-917-744-1674",
+      "contactType": "Business"
+    }
   }
-}
 </script>
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 
 <!-- Hero Section: Video Background -->
 <section class="hero-section">
@@ -40,12 +34,13 @@ Available for U.S. projects.{% endblock %}
       <source src="{{ url_for('static', filename='videos/background_video.mp4') }}" type="video/mp4">
     </video> -->
     <video autoplay muted loop playsinline class="background-video">
-      <source src="https://raw.githubusercontent.com/backgroundclouds/jptv-assets/main/background_video.mp4"
-        type="video/mp4">
+      <source
+        src="https://raw.githubusercontent.com/backgroundclouds/jptv-assets/main/background_video.mp4"
+        type="video/mp4"
+      />
     </video>
   </div>
 </section>
-
 
 <!-- About Section -->
 <section>
@@ -54,13 +49,35 @@ Available for U.S. projects.{% endblock %}
       <h2><strong>Bottom-Up Productivity, Top-Down Creativity.</strong></h2>
     </div>
     <div class="col-md-6">
-      <p>Hi! I'm a project-based Line Producer & PM. I work across the board in different scales and scopes, and I'm
-        available anywhere in the U.S.</p>
-      <p><a href="mailto:josh@jpax.tv?subject=Hi!" target="_blank">josh@jpax.tv</a></p>
+      <p>
+        Hi! I'm a project-based Line Producer & PM. I work across the board in
+        different scales and scopes, and I'm available anywhere in the U.S.
+      </p>
+      <p>
+        <a href="mailto:josh@jpax.tv?subject=Hi!" target="_blank"
+          >josh@jpax.tv</a
+        >
+      </p>
       <p>Full cv available apon request. Abridged gallery highlights below.</p>
-      <br>
+      <br />
       <div class="alert alert-dismissible alert-light">
-        <p class="text-secondary">Please Note: I am <strong>NOT</strong> accepting freelance gig work at this time.</p>
+        <p class="text-secondary">
+          Please note:
+          <strong>
+            I am no longer accepting work in this capacity. This site remains up
+            as a work history reference.
+          </strong>
+        </p>
+        <hr />
+        <p class="mb-0 text-secondary small">
+          <em>Each card contains the following</em>
+        </p>
+
+        <ul class="mb-2 small text-secondary">
+          <li><span class="fw-semibold">Employer</span> :<span class="fw-light"> Production Company<span></li>
+          <li><span class="fw-semibold">Client</span> :<span class="fw-light"> Ad Agency<span></li>
+          <li><span class="fw-semibold">End-Client</span> : <span class="fw-light"> Brand<span></li>
+        </ul>
       </div>
     </div>
   </div>
@@ -68,36 +85,46 @@ Available for U.S. projects.{% endblock %}
 
 <!-- Bootstrap Modal for Each Video -->
 {% for project in projects %}
-<div class="modal fade" id="videoModal{{ loop.index }}" tabindex="-1" aria-labelledby="videoModalLabel{{ loop.index }}"
-  onclick="event.preventDefault();" aria-hidden="true">
+<div
+  class="modal fade"
+  id="videoModal{{ loop.index }}"
+  tabindex="-1"
+  aria-labelledby="videoModalLabel{{ loop.index }}"
+  onclick="event.preventDefault();"
+  aria-hidden="true"
+>
   <div class="modal-dialog modal-dialog-centered modal-xl">
     <div class="modal-content">
       <div class="modal-header">
         <h5 class="modal-title">{{ project.title }}</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
       </div>
       <div class="modal-body p-0">
         <!-- Use Bootstrap's ratio helper -->
         <div class="ratio ratio-16x9">
-
-
-          {% set video_src = project.video_link %}
-          {% if 'youtube.com' in project.video_link %}
+          {% set video_src = project.video_link %} {% if 'youtube.com' in
+          project.video_link %}
           <!-- + '?rel=0&autoplay=1' &mute=1 -->
-          {% set video_src = project.video_link.replace('watch?v=', 'embed/') + '?rel=0' %}
-          {% elif 'vimeo.com' in project.video_link %}
-          {% if 'player.vimeo.com' not in project.video_link %}
-          {% set video_src = project.video_link | replace('vimeo.com/', 'player.vimeo.com/video/') %}
-          {% endif %}
-          {% endif %}
+          {% set video_src = project.video_link.replace('watch?v=', 'embed/') +
+          '?rel=0' %} {% elif 'vimeo.com' in project.video_link %} {% if
+          'player.vimeo.com' not in project.video_link %} {% set video_src =
+          project.video_link | replace('vimeo.com/', 'player.vimeo.com/video/')
+          %} {% endif %} {% endif %}
 
-
-          <iframe src="{{ video_src }}" allowfullscreen allow="autoplay; fullscreen picture-in-picture" scrolling="no"
-            frameborder="0" muted>
+          <iframe
+            src="{{ video_src }}"
+            allowfullscreen
+            allow="autoplay; fullscreen picture-in-picture"
+            scrolling="no"
+            frameborder="0"
+            muted
+          >
           </iframe>
-
-
-
         </div>
       </div>
     </div>
@@ -106,59 +133,67 @@ Available for U.S. projects.{% endblock %}
 {% endfor %}
 
 <script>
-  document.querySelectorAll('.modal').forEach(modal => {
-    modal.addEventListener('hidden.bs.modal', function () {
-      const iframe = this.querySelector('iframe');
+  document.querySelectorAll(".modal").forEach((modal) => {
+    modal.addEventListener("hidden.bs.modal", function () {
+      const iframe = this.querySelector("iframe");
       if (iframe) {
         iframe.src = iframe.src; // Reset the iframe source to stop the video
       }
     });
   });
-
-
-
-
 </script>
 <!-- Video Gallery Section -->
 <section>
-
-
   <div class="content-wrapper">
     <div class="row g-3">
-      <!-- <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-3"> --> <!-- @delete -->
       {% for project in projects %}
       <div class="col-12 col-sm-6 col-lg-4">
-        <!-- <div class="col-md-4 mb-4"> --> <!-- @delete -->
         <div class="video-card">
-          <a href="#" data-bs-toggle="modal" data-bs-target="#videoModal{{ loop.index }}">
+          <a
+            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#videoModal{{ loop.index }}"
+          >
             <div class="thumbnail-wrapper">
               <img
                 src="{{ url_for('static', filename=project.thumbnail or 'images/thumbnails/fallback_thumbnail.jpg') }}"
-                alt="{{ project.title }}" class="img-fluid video-thumbnail rounded">
+                alt="{{ project.title }}"
+                class="img-fluid video-thumbnail rounded"
+              />
               <div class="video-overlay p-2">
-                <span class="video-title">{{ project.title }}</span><br>
+                <span class="video-title">{{ project.title }}</span><br />
                 {% if project.video_link %}
-                <i class="bi bi-play-circle fs-1 fs-sm-2 fs-md-3 fs-lg-4 fs-xl-5" data-bs-toggle="modal"
-                  data-bs-target="#videoModal{{ loop.index }}"></i><br>
+                <i
+                  class="bi bi-play-circle fs-1 fs-sm-2 fs-md-3 fs-lg-4 fs-xl-5"
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoModal{{ loop.index }}"
+                ></i
+                ><br />
                 {% endif %}
 
                 <small>
-                  {% if project.production_company.name and project.production_company.link %}
-                  <a href="{{ project.production_company.link }}" target="_blank">{{
-                    project.production_company.name
-                    }}</a><br>
-                  {% endif %}
-                  {% if project.client and project.client.name and project.client.link %}
-                  <a href="{{ project.client.link }}" target="_blank">{{
-                    project.client.name }}</a><br>
-                  {% endif %}
-                  {% if project.director and project.director.name and project.director.link %}
-                  Dir. <a href="{{ project.director.link }}" target="_blank">{{
-                    project.director.name }}</a><br>
-                  {% endif %}
-                  {% if project.agency and project.agency.name and project.agency.link %}
-                  <a href="{{ project.agency.link }}" target="_blank">{{
-                    project.agency.name }}</a>
+                  {% if project.production_company.name and
+                  project.production_company.link %}
+                  <a
+                    href="{{ project.production_company.link }}"
+                    target="_blank"
+                    >{{ project.production_company.name }}</a
+                  ><br />
+                  {% endif %} {% if project.client and project.client.name and
+                  project.client.link %}
+                  <a href="{{ project.client.link }}" target="_blank"
+                    >{{ project.client.name }}</a
+                  ><br />
+                  {% endif %} {% if project.director and project.director.name
+                  and project.director.link %} Dir.
+                  <a href="{{ project.director.link }}" target="_blank"
+                    >{{ project.director.name }}</a
+                  ><br />
+                  {% endif %} {% if project.agency and project.agency.name and
+                  project.agency.link %}
+                  <a href="{{ project.agency.link }}" target="_blank"
+                    >{{ project.agency.name }}</a
+                  >
                   {% endif %}
                 </small>
               </div>
@@ -171,48 +206,24 @@ Available for U.S. projects.{% endblock %}
   </div>
 </section>
 
-
 <!-- Scope Section (New Header & Off-White Background) -->
 <section>
   <div class="container text-dark p-1" style="background-color: #f8f9fa">
-    {% set prepro_items = [
-    "Budget / Bid",
-    "Propose Directors",
-    "Source Creative Heads",
-    "Location Scouting",
-    "<strong>Source</strong> + <strong>Recommend</strong>: Creative Heads <i>(DP's, Art Directors, etc..)</i>",
-    "<strong>Source</strong>: Specialists <i>(Steadicam, Puppeteers, Animal Handlers, etc)</i>",
-    "Hire Crew",
-    "Source Equipment",
-    "Casting",
-    "Pre-Production Books",
-    "Travel Coordination"
-    ] %}
-
-    {% set pro_items = [
-    "AICP, DGA, SAG, IATSE friendly",
-    "Non-Union Friendly",
-    "Outer Market Familiar",
-    "Motion // Stills",
-    "Line Produce/ Manage/Coordinate/ Production",
-    "Safety Cautious",
-    "Analog // Digital",
-    "Film: 16mm, 35mm",
-    "Digital: Arri, Red, Sony, 4:4:4, 4:2:2",
-    "Drones, Cranes, Quads, Condors, Steadicams, Process Trailers, etc.",
-    "Execute Deliverables",
-    ] %}
-    {% set post_items = [
-    "Payroll Services",
-    "Actualize in ShowBiz, Hotbudget , Point Zero, etc,.",
-    "Facilitate Post Crew",
-    "Voice Actors",
-    "Picture Lock",
-    "Sound Sync",
-    "Color Grade",
-    "Transcode For Broadcast",
-    "Put a bow on it",
-    ] %}
+    {% set prepro_items = [ "Budget / Bid", "Propose Directors", "Source
+    Creative Heads", "Location Scouting", "<strong>Source</strong> +
+    <strong>Recommend</strong>: Creative Heads
+    <i>(DP's, Art Directors, etc..)</i>", "<strong>Source</strong>: Specialists
+    <i>(Steadicam, Puppeteers, Animal Handlers, etc)</i>", "Hire Crew", "Source
+    Equipment", "Casting", "Pre-Production Books", "Travel Coordination" ] %} {%
+    set pro_items = [ "AICP, DGA, SAG, IATSE friendly", "Non-Union Friendly",
+    "Outer Market Familiar", "Motion // Stills", "Line Produce/
+    Manage/Coordinate/ Production", "Safety Cautious", "Analog // Digital",
+    "Film: 16mm, 35mm", "Digital: Arri, Red, Sony, 4:4:4, 4:2:2", "Drones,
+    Cranes, Quads, Condors, Steadicams, Process Trailers, etc.", "Execute
+    Deliverables", ] %} {% set post_items = [ "Payroll Services", "Actualize in
+    ShowBiz, Hotbudget , Point Zero, etc,.", "Facilitate Post Crew", "Voice
+    Actors", "Picture Lock", "Sound Sync", "Color Grade", "Transcode For
+    Broadcast", "Put a bow on it", ] %}
 
     <h2 class="text-center">SCOPE</h2>
     <div class="row text-center">
@@ -224,8 +235,6 @@ Available for U.S. projects.{% endblock %}
           <li>{{ item | safe }}</li>
           {% endfor %}
         </ul>
-
-
       </div>
       <div class="col-md-4">
         <h4 class="fs-3 fs-md-4 fs-sm-5">PRODUCTION</h4>
@@ -235,32 +244,24 @@ Available for U.S. projects.{% endblock %}
           <li class="">{{ item }}</li>
           {% endfor %}
         </ul>
-
-
       </div>
       <div class="col-md-4">
         <h4>POST-PRODUCTION</h4>
         <h5><u>Communicate Client Needs</u></h5>
-        <ul class="list-unstyled text-start ps-3 ">
+        <ul class="list-unstyled text-start ps-3">
           {% for item in post_items %}
           <li class="">{{ item }}</li>
           {% endfor %}
         </ul>
-
       </div>
     </div>
   </div>
 </section>
 
 <section style="background-color: #f8f9fa">
-
-
-
   {% include 'includes/contact_info.html' %}
-
 
   <!-- </div> -->
 </section>
-
 
 {% endblock %}
